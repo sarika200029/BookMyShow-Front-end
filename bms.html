@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BookMyShow</title>
+        <style>
+            header {
+                padding: 0px 100px 0px 100px;
+            }
+            header img {
+                width: 150px;
+                height: 70px;
+            }
+            .Navbar
+		    {
+			list-style-type: none;
+			margin:0;
+			padding: 0;
+			overflow:hidden;
+			background: white;
+            display:inline-block;
+            width: 100%;
+		    }
+            .logo {
+            margin-right: 20px;
+            margin-left: 20px;
+            float: left;
+            padding: 7px;
+            
+        }
+
+        #logo a:hover{
+            background: #f1f1f1;
+            text-decoration: underline;
+            color: black;
+        }
+
+        #logoText{
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .logoColr2{
+            color:white;
+            background-color: red;
+        }
+            .parent {
+                display: flex;
+            }
+            .parent #search_box {
+                width: 500px;
+                padding: 5px;
+            }
+            .search_icon {
+                margin: 5px;
+                padding: 17px 0px 15px 10px;        
+            }
+            .parent .child1 {
+                padding: 17px 10px 15px 0px;
+            }
+            .parent .empty {
+                margin : 10px 150px 10px 150px;
+            }
+            .parent .drop_down {
+                padding: 5px 2px;
+                border : none;
+                margin : 20px 5px 20px 5px;
+                cursor: pointer;
+            }
+            .parent #sign_in {
+                border: none;
+                border-radius: 5px;
+                width: 100px;
+                background-color: rgba(243, 16, 110, 0.919);
+                color: white;
+                padding: 5px;
+                margin: 20px 10px;
+                cursor: pointer;
+            }
+            .parent .settings_icon {
+                margin: 25px 10px;;
+            }
+            .parent #settings_icon {
+                    border: none;
+                    background-color: white;
+                    cursor: pointer;
+            }
+            .parent_div {
+                display: flex;
+                padding: 10px 100px 10px 90px;
+                background-color: rgba(230, 236, 239, 0.93);
+                border-bottom: 1px solid rgb(186, 182, 182);
+            }
+            .child_div {
+                margin : 0px 20px 0px 20px;
+                font-size: medium;
+                color: black;
+            }
+            #empty_div {
+                padding : 0px 530px 0px 0px;
+            }
+            .heading{
+                padding: 10px 100px;
+                background-color: rgba(230, 236, 239, 0.93);
+                margin: 0px;
+                /*border-top: 1px solid rgb(186, 182, 182);*/
+                font-family:Arial, Helvetica, sans-serif;
+                font-size: 20px;        
+            }
+            main {
+                background-color: rgba(230, 236, 239, 0.93);
+            }
+            .movies {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 0px 100px 0px 100px;    
+            }
+            .movies .movie {
+                width: 100%;
+                /* height: 200px;*/
+                padding: 5px;
+                margin: 0px 10px;
+                text-align: center;      
+            }
+            .movies .movie img {
+                border-radius: 10px;
+            }
+            .movies .movie h2 {
+                font-size: 18px;
+                margin: 5px;
+            }
+            .movies .movie p{
+                margin: 5px;
+            }
+            #main1,#main2,#main3,#main4,#main5{
+                background-color: rgb(54, 51, 51);
+                display: flex;
+                color: white;
+                padding: 5px 150px;
+                font-family :sans-serif;
+            }
+            #main2 {
+                background-color: rgb(69, 67, 67);
+            }
+            #main3 {
+                display: block;
+            }
+            
+            #main3 h5 {
+                font-weight: normal;
+                color: rgb(185, 179, 179);
+            }
+                
+            #main1 .para {
+                padding: 5px 200px 5px 10px;
+            }
+            #main1 .contact_button {
+                border: none;
+                background-color: rgba(243, 16, 110, 0.919);
+                color: white;
+                border-radius: 5px;
+                width: 150px;
+                margin: 10px;
+                font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                cursor: pointer;
+            }
+            #main2 .footer_div {
+                width: 100%;
+                height: auto;
+                background-color: rgb(69, 67, 67);
+                display: flex;   
+                justify-content: space-evenly;
+                padding: 5px;  
+            }
+            #main2 .footer_div .logo {
+                width: 35px;
+                height: 35px;
+                margin: 5px;
+            }
+            #main2 .footer_div .child_footer_div {
+                text-align: center;
+                padding: 5px;
+            }
+            #main2 h4,a {
+                font-weight: normal;
+                font-size:small ;
+                text-decoration: none;
+                color: grey;
+                margin: 0px;
+            }
+            #main3,#main4,#main5 p,a{
+                color: grey;
+                font-weight: normal;
+            }
+            #main4 {
+                display: flex;
+                width: auto;
+                padding: 10px;
+                justify-content: center;
+            }
+            #main4 div a {
+                height: 200px;
+                padding: 5px 10px 5px 10px;
+            }
+            #main4 div a .icon {
+                height: 40px;
+                width: 40px;
+            }
+            #main5 {
+                display: block;
+                text-align: center;
+                padding: 10px 100px 10px 100px;
+            }
+            #main5 p {
+                margin: 5px;
+                font-size: 15px;     
+            }
+            body {
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="parent">
+                <div><ul class="Navbar"><li class="logo"><a id="logoText" href="index.html">Book<span class="logoColr2">My</span>Show </a></li></div>
+                <div><i class="fa-solid fa-magnifying-glass search_icon"></i></div>
+                <div class="child1"><input id="search_box" type="search" placeholder="Search for Movies, Events, Plays, Sports and Activities"> </div>
+                <div class="empty"></div>
+                <div><select class="drop_down">
+                    <option>Bangalore </option>
+                    <option>Hyderabad</option>
+                    <option>Mumbai</option>
+                    <option>Delhi</option>
+                </select></div>
+                <div><button id="sign_in">Sign in</button></div>
+                <div class="settings_icon"><button id="settings_icon"><i class="fa-solid fa-bars"></i></button></div>
+            </div>
+        </header>
+            <div class="parent_div">
+                <div class="child_div"><a href="#">Movies</a></div>
+                <div class="child_div"><a href="#">Streams</a></div>
+                <div class="child_div"><a href="#">Events</a></div>
+                <div class="child_div"><a href="#">Plays</a></div>
+                <div class="child_div"><a href="#">Sports</a></div>
+                <div class="child_div" id="empty_div"><a href="#">Activities</a></div>
+                <div class="child_div">ListYourShow</div>
+                <div class="child_div">Corporates</div>
+                
+            </div>
+            <h2 class="heading">Recommended Movies</h2>
+            <main>
+            <div class="movies">
+                <div class="movie">
+                    <a href=""><img src="tumbbad.jfif" width="200px" height="300px"></a>
+                    <h2>TUMBBAD</h2>
+                    <p>Romance/Drama</p>    
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="joker.jfif" width="200px" height="300px"></a>
+                    <h2>JOKER:FOLIE A DEUX</h2>
+                    <p>Romance/Drama</p>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="devara.jfif" width="200px" height="300px"></a>
+                    <h2>DEVARA </h2>
+                    <p>Romance/Drama</p>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="itl.jfif" width="200px" height="300px"></a>
+                    <h2>IBBANI TABBIDA LLEYALI</h2>
+                    <p>Romance/Drama</p>
+                </div>
+            </div>
+            <h2 class="heading">Outdoor Events</h2>
+            <div class="movies">
+                <div class="movie">
+                    <a href="#"><img src="tumbbad.jfif" width="200px" height="300px"></a>
+                    <h2>TUMBBAD</h2>
+                    <p>Romance/Drama</p>    
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="devara.jfif" width="200px" height="300px"></a>
+                    <h2>DEVARA</h2>
+                    <p>Romance/Drama</p>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="joker.jfif" width="200px" height="300px"></a>
+                    <h2>joker</h2>
+                    <p>Romance/Drama</p>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="itl.jfif" width="200px" height="300px"></a>
+                    <h2>IBBANI TABBIDA LLEYALI</h2>
+                    <p>Romance/Drama</p>
+                </div>
+            </div>
+            <h2 class="heading">Events</h2>
+            <div class="movies">
+                <div class="movie">
+                    <a href="#"><img src="itl.jfif" width="200px" height="300px"></a>
+                    <h2>IBBANI TABBIDA LLEYALI</h2>
+                    <p>Romance/Drama</p>    
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="devara.jfif" width="200px" height="300px"></a>
+                    <h2>DEVARA</h2>
+                    <p>Romance/Drama</p>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="joker.jfif" width="200px" height="300px"></a>
+                    <h2>JOKER</h2>
+                    <p>Romance/Drama</p>
+                </div>
+                <div class="movie">
+                    <a href="#"><img src="tumbbad.jfif" width="200px" height="300px"></a>
+                    <h2>TUMBBAD</h2>
+                    <p>Romance/Drama</p>
+                </div>
+            </div>
+        </main>
+        <main id="main1">
+            <h3>List Your Show</h3>
+            <p class="para">Got a show, event, activity or a great experience? Partner with us & get listed on BookMyShow</p>
+            <button class="contact_button">Contact today!</button>
+        </main>
+        <main id="main2">
+            <div class="footer_div">
+                <div class="child_footer_div"><a href=""><i class="fa-solid fa-headset logo"></i><h4>24/7 CUSTOMER CARE</h4></a></div>
+                <div class="child_footer_div"><a href=""><i class="fa-solid fa-ticket logo"></i><h4>RESEND BOOKING CONFIRMATION</h4></a></div>
+                <div class="child_footer_div"><a href=""><i class="fa-regular fa-envelope logo"></i><h4>SUBSCRIBE TO THE NEWS LETTER</h4></a></div>
+            </div>
+        </main>
+        <main id="main3">
+            <h5>MOVIES NOW SHOWING IN BENGALURU</h5>
+            <p><a href="#">Transformers One</a> | <a href="">Ibbani Tabbida Ileyali</a> | <a href="">Upendra</a> | <a href="">Stree 2: Sarkate Aatank</a> | <a href="">Kishkinda Kaandam</a> | <a href="">Lubber Pandu</a> | <a href="">Yudhra</a> | <a href="">Tumbbad</a></p>
+            <h5>UPCOMING MOVIES IN BENGALURU</h5>
+            <p><a href="#">Bharga</a> | <a href="">Shukrana</a> | <a href="">Thekku Vadakku</a> | <a href="">Petta Rap</a> | <a href="">Ranbhoomi</a> | <a href="">Rudra The Beggining</a> | <a href="">Dhil Raja</a> | <a href="">Binny and Family</a></p>
+            <h5>MOVIES BY GENRE</h5>
+            <p><a href="#">Thriller Movies</a> | <a href="">Drama Movies</a> | <a href="">Action Movies</a> | <a href="">Romantic Movies</a> | <a href="">Comedy Movies</a> | <a href="">Horror Movies</a> | <a href="">Crime Movies</a> | <a href="">Animated Movies</a> | <a href="">Sci-Fi Movies</a> | <a href="">Adventure Movies</a></p>
+            <h5>MOVIES BY LANGUAGE</h5>
+            <p><a href="#">Movies in English</a> | <a href="">Movies in Kannada</a> | <a href="">Movies in Telugu</a> | <a href="">Movies in Tamil</a> | <a href="">Movies in Hindi</a> | <a href="">Movies in Malayalam</a> | <a href="">Movies in Haryanavi</a></p>
+            <h5>SPORTS EVENTS IN BENGALURU</h5>
+            <p><a href="#">Chess</a> | <a href="">Running</a> | <a href="">Football</a> | <a href="">Basketball</a> | <a href="">Baseball</a> | <a href="">Cricket</a> | <a href="">Cycling</a> | <a href="">Bowling</a></p>
+            <h5>EVENTS IN TOP CITIES</h5>
+            <p><a href="#">Events in Mumbai</a> | <a href="">Events in Bengaluru</a> | <a href="">Events in Tirupati</a> | <a href="">Events in Chennai</a> | <a href="">Events in Hyderabad</a> | <a href="">Events in Pune</a> | <a href="">Events in kolkata</a> | <a href="">Events in Kochi</a></p>
+            <h5>CINEMAS IN TOP CITIES</h5>
+            <p><a href="#">Cinemas in Mumbai</a> | <a href="">Cinemas in Bengaluru</a> | <a href="">Cinemas in Tirupati</a> | <a href="">Cinemas in Chennai</a> | <a href="">Cinemas in Hyderabad</a> | <a href="">Cinemas in Pune</a> | <a href="">Cinemas in Kochi</a> | <a href="">Cinemas in Kolkata</a></p>
+            <h5>PLAYS IN TOP CITIES</h5>
+            <p><a href="#">Plays in mumbai</a> | <a href="">Plays in Bengaluru</a> | <a href="">Plays in Kolkata</a> | <a href="">Plays in Tirupati</a> | <a href="">Plays in Hyderabad</a> | <a href="">Plays in Kochi</a> | <a href="">Plays in Chennai</a> | <a href="">Plays in Delhi</a></p>
+            <h5>COUNTRIES</h5>
+            <p><a href="#">Indonesia</a> | <a href="">Singapore</a> | <a href="">UAE</a> | <a href="">Sri Lanka</a> | <a href="">West Indies</a></p>
+            <h5>HELP</h5>
+            <p><a href="#">About Us</a> | <a href="">Contact Us</a> | <a href="">Current Opening</a> | <a href="">Press Release</a> | <a href="">Press Coverage</a> | <a href="">Sitemap</a> | <a href="">FAQs</a> | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>    
+            <h5>BOOKMYSHOW EXCLUSIVES</h5>
+            <p><a href="#">Lollapalooza India</a> | <a href="">Superstar</a> | <a href="">BookAChange</a> | <a href="">Corporate Vouchers</a> | <a href="">Gift Cards</a> | <a href="">List My Show</a> | <a href="">Offers</a> | <a href="">Stream</a> | <a href="">Trailers</a></p>    
+        </main>
+        <main id="main4">
+            <div><a href="#"><i class="fa-brands fa-square-facebook icon"></i></a></div>
+            <div><a href="#"><i class="fa-brands fa-square-instagram icon"></i></a></div>
+            <div><a href="#"><i class="fa-brands fa-square-x-twitter icon"></i></a></div>
+            <div><a href="#"><i class="fa-brands fa-square-youtube icon"></i></i></a></div>
+            <!--<div><a href=""><i class="fa-brands fa-square-pinterest icon"></i></a></div>-->
+            <div><a href="#"><i class="fa-brands fa-linkedin icon"></i></a></div>
+        </main>
+        <main id="main5">
+            <p> Copyright 2024 &copy; Entertainment Pvt. Ltd. All Rights Reserved.</p>
+        </main>
+    </body>
+</html>
